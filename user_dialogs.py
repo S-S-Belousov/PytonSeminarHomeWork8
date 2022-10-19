@@ -28,7 +28,7 @@ def find_person_dialog():
     return search_item
 
 
-def delete_person_dialog(dialog_num, id_person = 0):
+def delete_person_dialog(dialog_num, id_person=0):
     match dialog_num.split():
         case['1']:
             person_id = input('\nВведите id человека для удаления: ')
@@ -39,7 +39,7 @@ def delete_person_dialog(dialog_num, id_person = 0):
             f'\nПользователь с id {id_person} не найден'+"\033[0m"))
 
 
-def change_person_dialog(dialog_num, id_person = 0):
+def change_person_dialog(dialog_num, id_person=0):
     match dialog_num.split():
         case['1']:
             person_id = input('\nВведите id человека для изменения: ')

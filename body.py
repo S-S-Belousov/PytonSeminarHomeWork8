@@ -52,14 +52,15 @@ def change_person():
     id_person = user_dialogs.change_person_dialog('1')
     for item in global_variables.global_person_list:
         if id_person in item['id']:
-            for change_id in range(1,len(item)):
-                print(f'\nТекущее значение {global_variables.person_list_ids[change_id]}: {item[global_variables.person_list_ids[change_id]]}')
-                item[global_variables.person_list_ids[change_id]]=input('\nВведите новое значение: ')    
+            for change_id in range(1, len(item)):
+                print(
+                    f'\nТекущее значение {global_variables.person_list_ids[change_id]}: {item[global_variables.person_list_ids[change_id]]}')
+                item[global_variables.person_list_ids[change_id]
+                     ] = input('\nВведите новое значение: ')
             user_dialogs.change_person_dialog('2', id_person)
             break
     else:
         user_dialogs.change_person_dialog('3', id_person)
-
 
 
 def do_menu_id(menu_id):
